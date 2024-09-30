@@ -32,17 +32,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request 
 ## Licença
 
 Este projeto é de domínio público e pode ser usado livremente para fins de entretenimento.
-
----
-
-Aproveite a experiência e divirta-se!
-
-### Instruções para o `README.md`
-- **Título**: "Projeto de Entretenimento" para refletir o propósito do site.
-- **Funcionalidades**: Descreve as principais características do site.
-- **Tecnologias Utilizadas**: Listagem das tecnologias que você usou para criar o site.
-- **Como Usar**: Instruções simples sobre como clonar o repositório e abrir o site.
-- **Contribuições**: Convite para que outras pessoas contribuam com o projeto.
-- **Licença**: Indicação de que o projeto é de domínio público.
-
-Você pode ajustar o conteúdo conforme necessário, adicionando informações específicas sobre seu projeto ou personalizando detalhes.
