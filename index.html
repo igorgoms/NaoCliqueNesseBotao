@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Não pressione esse botão!</title>
+    <style>
+        body {
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto em cinza claro */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffffff; /* Título em branco */
+            font-size: 2em;
+        }
+
+        img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+            transition: all 0.2s ease; /* Transição rápida para o efeito flashbang */
+            filter: brightness(0); /* Começa sem brilho */
+            margin-top: 20px;
+        }
+
+        img.flashbang {
+            filter: brightness(10); /* Brilho máximo para o efeito flashbang */
+        }
+
+        img.normal {
+            filter: brightness(1); /* Retorna ao brilho normal */
+            transition: all 1.5s ease; /* Transição suave para o brilho normal */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #1e88e5; /* Azul escuro para o tema dark */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+            margin-top: 20px;
+            animation: pulse 2s infinite; /* Animação de pulsação */
+        }
+
+        button:hover {
+            background-color: #1565c0; /* Azul mais escuro ao passar o mouse */
+            transform: scale(1.05); /* Aumenta o tamanho do botão */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra ao passar o mouse */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05); /* Aumenta o tamanho durante a pulsação */
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilos responsivos para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            img {
+                margin-top: 10px;
+            }
+
+            button {
+                width: 100%;
+                max-width: 300px; /* Limita a largura do botão em telas menores */
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            button {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Não Clique no botão!!!</h1>
+    <button onclick="showImageAndPlayAudio()">Não Clique!</button>
+
+    <br><br>
+    <img id="image" src="/lebron.jpg" alt="Imagem">
+
+    <audio id="audio" src="/bem.mp3"></audio>
+
+    <script>
+        function showImageAndPlayAudio() {
+            var image = document.getElementById("image");
+            var audio = document.getElementById("audio");
+
+            // Exibe a imagem com flashbang
+            image.style.display = "block";
+            
+            // Aplica o efeito de flashbang (brilho intenso e rápido)
+            setTimeout(function() {
+                image.classList.add("flashbang");
+            }, 100); // Atraso curto para começar o flash
+
+            // Reduz o brilho rapidamente para o normal após o flashbang
+            setTimeout(function() {
+                image.classList.remove("flashbang");
+                image.classList.add("normal");
+            }, 400); // 400ms para reduzir a intensidade do brilho
+
+            // Define o volume do áudio para o máximo
+            audio.volume = 1.0; // Volume máximo
+
+            // Toca o áudio
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
