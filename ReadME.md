@@ -18,7 +18,7 @@ Este é um projeto de site interativo voltado para o entretenimento, onde os usu
 
 1. **Clone o Repositório**:
    ```bash
-   git clone https://github.com/seu_usuario/seu_repositorio.git
+   git clone https://github.com/igorgoms/NaoCliqueNesseBotao.git
    ```
 
 2. **Abra o arquivo `index.html` em um navegador**.
